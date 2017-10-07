@@ -271,14 +271,22 @@ $ echo ${PIPESTATUS[@]}
 
 >>>
 
+## 追記
+
+- ...という LT をしたら、早速追加の知見を頂いたので追記
+    - ありがとうございます
+- <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="ja" dir="ltr">headをむりやりラインバッファモードにする手もある<br>echo ヤサイゼリ | grep -o . | shuf -r | tr -d &#39;\n&#39; | fold -w15 | awk &#39;/サイゼリヤ/{print NR}&#39; | stdbuf -oL head -n1<br># シェル芸</p>&mdash; eban (@eban) <a href="https://twitter.com/eban/status/916582296680988673?ref_src=twsrc%5Etfw">October 7, 2017</a></blockquote>
+- <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">awkでexitする手もある <a href="https://twitter.com/hashtag/%E3%82%B7%E3%82%A7%E3%83%AB%E8%8A%B8?src=hash&amp;ref_src=twsrc%5Etfw">#シェル芸</a></p>&mdash; みどりごけ@FE勉強中 (@midokokemaru) <a href="https://twitter.com/midokokemaru/status/916581617610629121?ref_src=twsrc%5Etfw">2017年10月7日</a></blockquote>
+
+---
+
 ## おしらせ
 
 - [シェル芸勉強会 meets バイオインフォマティクス vol.1](https://bio-shell.connpass.com/event/66089/)
     - 2017/10/18 (水) 19:00-21:30 @東京
     - <blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-partner="tweetdeck"><p lang="ja" dir="ltr">気付いたらもう満員になってますね。<br>この勢いではバイオ勢が大阪サテライトを作るのも時間の問題です。その前に本家は海外にサテライト作るくらいじゃないと。。。</p>&mdash; キュアぐれさん (@grethlen) <a href="https://twitter.com/grethlen/status/904709186499391488?ref_src=twsrc%5Etfw">September 4, 2017</a></blockquote>
 - [バイオシェル芸勉強会　大阪公聴会](https://atnd.org/events/91434)
-    - 大阪リモート会場用意してもらいました
-    - @フェンリル株式会社 (グランフロント大阪 北館 14F)
+    - 大阪サテライト会場用意してもらいました
 
 >>>
 
@@ -287,6 +295,5 @@ $ echo ${PIPESTATUS[@]}
 - バイオシェル芸...ってこういうこと?
 
 ```
-$ while :;do echo;sleep 0.1;done | awk '{a=sin(NR/3)*5+5;b=10-a;for(i=1;i<((a<b)?a:b);i++)printf " ";printf (sqrt((a-b)^2)<1.5)?"":(a<b)?"🍚":"🐟";for(i=i;i<((a<b)?b:a);i++)printf " ";print (sqrt((a-b)^2)<1.5)?"🍣":(a>b)?"🍚":"🐟"}''
+$ while :;do echo;sleep 0.1;done | awk '{a=sin(NR/3)*5+5;b=10-a;for(i=1;i<((a<b)?a:b);i++)printf " ";printf (sqrt((a-b)^2)<1.5)?"":(a<b)?"🍚":"🐟";for(i=i;i<((a<b)?b:a);i++)printf " ";print (sqrt((a-b)^2)<1.5)?"🍣":(a>b)?"🍚":"🐟"}'
 ```
-
